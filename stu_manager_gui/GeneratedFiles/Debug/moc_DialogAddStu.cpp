@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'stu_manager_gui.h'
+** Meta object code from reading C++ file 'DialogAddStu.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.11.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../stu_manager_gui.h"
+#include "../../DialogAddStu.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'stu_manager_gui.h' doesn't include <QObject>."
+#error "The header file 'DialogAddStu.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.11.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,28 +20,28 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_stu_manager_gui_t {
+struct qt_meta_stringdata_DialogAddStu_t {
     QByteArrayData data[4];
-    char stringdata0[43];
+    char stringdata0[38];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_stu_manager_gui_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_DialogAddStu_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_stu_manager_gui_t qt_meta_stringdata_stu_manager_gui = {
+static const qt_meta_stringdata_DialogAddStu_t qt_meta_stringdata_DialogAddStu = {
     {
-QT_MOC_LITERAL(0, 0, 15), // "stu_manager_gui"
-QT_MOC_LITERAL(1, 16, 11), // "OnTouchShow"
-QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 13) // "OnTouchAddStu"
+QT_MOC_LITERAL(0, 0, 12), // "DialogAddStu"
+QT_MOC_LITERAL(1, 13, 9), // "OnTouchOk"
+QT_MOC_LITERAL(2, 23, 0), // ""
+QT_MOC_LITERAL(3, 24, 13) // "OnTouchCancel"
 
     },
-    "stu_manager_gui\0OnTouchShow\0\0OnTouchAddStu"
+    "DialogAddStu\0OnTouchOk\0\0OnTouchCancel"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_stu_manager_gui[] = {
+static const uint qt_meta_data_DialogAddStu[] = {
 
  // content:
        7,       // revision
@@ -65,42 +65,42 @@ static const uint qt_meta_data_stu_manager_gui[] = {
        0        // eod
 };
 
-void stu_manager_gui::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void DialogAddStu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        stu_manager_gui *_t = static_cast<stu_manager_gui *>(_o);
+        DialogAddStu *_t = static_cast<DialogAddStu *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->OnTouchShow(); break;
-        case 1: _t->OnTouchAddStu(); break;
+        case 0: _t->OnTouchOk(); break;
+        case 1: _t->OnTouchCancel(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject stu_manager_gui::staticMetaObject = {
-    { &QMainWindow::staticMetaObject, qt_meta_stringdata_stu_manager_gui.data,
-      qt_meta_data_stu_manager_gui,  qt_static_metacall, nullptr, nullptr}
+QT_INIT_METAOBJECT const QMetaObject DialogAddStu::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_DialogAddStu.data,
+      qt_meta_data_DialogAddStu,  qt_static_metacall, nullptr, nullptr}
 };
 
 
-const QMetaObject *stu_manager_gui::metaObject() const
+const QMetaObject *DialogAddStu::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *stu_manager_gui::qt_metacast(const char *_clname)
+void *DialogAddStu::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_stu_manager_gui.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_DialogAddStu.stringdata0))
         return static_cast<void*>(this);
-    return QMainWindow::qt_metacast(_clname);
+    return QDialog::qt_metacast(_clname);
 }
 
-int stu_manager_gui::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int DialogAddStu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QMainWindow::qt_metacall(_c, _id, _a);
+    _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {

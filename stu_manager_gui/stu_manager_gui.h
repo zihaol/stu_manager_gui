@@ -2,13 +2,10 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_stu_manager_gui.h"
-#include <QSql>
-#include <QSqlDatabase>
-#include <QSqlError>
-#include <QSqlQuery>
 #include <QString>
-#include <QDebug>
 #include <QSqlQueryModel>
+#include "StuSqlOper.h"
+#include "DialogAddStu.h"
 
 class stu_manager_gui : public QMainWindow
 {
@@ -16,11 +13,13 @@ class stu_manager_gui : public QMainWindow
 
 public:
 	stu_manager_gui(QWidget *parent = Q_NULLPTR);
-	bool ConnectDataBase();
-	//对应操作回调
+	void UpdateResult(QAbstractItemModel *pModel);
+	//void setStuSqlOper(StuSqlOper* pStuSqlOper = nullptr) { m_pStuSqlOper = pStuSqlOper; }
 public slots:
 	void OnTouchShow();
+	void OnTouchAddStu();
 private:
-	Ui::stu_manager_guiClass ui;
-	//QSqlDatabase			m_sqlDataBase;
+	Ui::stu_manager_guiClass	ui;
+	DialogAddStu*				m_pDialogAddStu;
+	//StuSqlOper*					m_pStuSqlOper;
 };
