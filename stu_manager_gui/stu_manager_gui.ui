@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>stu_manager_guiClass</class>
+ <widget class="QMainWindow" name="stu_manager_guiClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>学生管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableView" name="m_pTableViewResult">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>11</y>
+      <width>571</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="m_pMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="m_pMenuStu">
+    <property name="title">
+     <string>基本信息</string>
+    </property>
+    <addaction name="m_pActionShowStu"/>
+    <addaction name="separator"/>
+    <addaction name="m_pActionAddStu"/>
+    <addaction name="m_pActionDelStu"/>
+    <addaction name="m_pActionSearchStu"/>
+    <addaction name="m_pActionChangeStu"/>
+   </widget>
+   <widget class="QMenu" name="m_pMenuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="m_pActionAbout"/>
+   </widget>
+   <addaction name="m_pMenuStu"/>
+   <addaction name="m_pMenuHelp"/>
+  </widget>
+  <action name="m_pActionAbout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="m_pActionAddStu">
+   <property name="text">
+    <string>添加</string>
+   </property>
+  </action>
+  <action name="m_pActionDelStu">
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="m_pActionSearchStu">
+   <property name="text">
+    <string>查找</string>
+   </property>
+  </action>
+  <action name="m_pActionChangeStu">
+   <property name="text">
+    <string>更改</string>
+   </property>
+  </action>
+  <action name="m_pActionShowStu">
+   <property name="text">
+    <string>显示</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="stu_manager_gui.qrc"/>
+ </resources>
+ <connections/>
+</ui>
