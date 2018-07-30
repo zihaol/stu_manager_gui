@@ -18,6 +18,7 @@ public:
 public slots:
 	void OnTouchShow();
 	void OnTouchAddStu();
+	void OnMyShow(int nNum);
 private:
 	Ui::stu_manager_guiClass	ui;
 	DialogAddStu*				m_pDialogAddStu;

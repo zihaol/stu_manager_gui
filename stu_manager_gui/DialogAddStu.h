@@ -7,6 +7,8 @@ class stu_manager_gui;
 class DialogAddStu : public QDialog
 {
 	Q_OBJECT
+signals:
+	void MyShow(int nNum);
 public:
 	DialogAddStu(stu_manager_gui* pMainLayer = nullptr,QWidget* pParent = Q_NULLPTR);
 	~DialogAddStu();

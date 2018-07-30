@@ -12,6 +12,11 @@ stu_manager_gui::stu_manager_gui(QWidget *parent)
 	QObject::connect(ui.m_pActionAddStu, SIGNAL(triggered()), this, SLOT(OnTouchAddStu()));
 }
 
+void stu_manager_gui::OnMyShow(int nNum)
+{
+	int a = nNum;
+	OnTouchShow();
+}
 void stu_manager_gui::OnTouchAddStu()
 {
 	if (nullptr == m_pDialogAddStu)

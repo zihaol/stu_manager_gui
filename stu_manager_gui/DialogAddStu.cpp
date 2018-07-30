@@ -9,6 +9,8 @@ DialogAddStu::DialogAddStu(stu_manager_gui* pMainLayer, QWidget* pParent)
 	//Ìí¼ÓÏìÓ¦
 	QObject::connect(ui.m_pBtnCancel, SIGNAL(clicked()), this, SLOT(OnTouchCancel()));
 	QObject::connect(ui.m_pBtnOK, SIGNAL(clicked()), this, SLOT(OnTouchOk()));
+
+	QObject::connect(this, SIGNAL(MyShow(int)), m_pMainLayer, SLOT(OnMyShow(int)));
 }
 
 DialogAddStu::~DialogAddStu()
@@ -24,6 +26,7 @@ void DialogAddStu::OnTouchOk()
 	if (nullptr != m_pMainLayer)
 	{
 		m_pMainLayer->OnTouchShow();
+		//emit MyShow(77);
 	}
 }
 
