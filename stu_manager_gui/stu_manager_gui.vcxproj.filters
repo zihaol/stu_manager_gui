@@ -42,6 +42,12 @@
     <ClCompile Include="DialogAddStu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DialogDelStuInfoui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogChangeStuInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="stu_manager_gui.h">
@@ -50,12 +56,21 @@
     <QtMoc Include="DialogAddStu.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="DialogDelStuInfoui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DialogChangeStuInfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="stu_manager_gui.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="DialogAddStuInfo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DialogDelStuInfoui.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

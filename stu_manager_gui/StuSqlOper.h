@@ -15,6 +15,8 @@ public:
 	QSqlQuery* GetQueryOper();
 	void GetAllStuInfo();
 	void AddStuInfo(int nStuID, QString strName, int nAge);
+	void DelStuInfo(int nStuID);
+	void ChangeStuInfo(int nStuID, QString strName, int nAge);
 private:
 	QSqlQuery*	m_pOper;
 	static StuSqlOper* s_pStuOper;

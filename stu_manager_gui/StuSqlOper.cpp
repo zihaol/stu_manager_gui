@@ -28,6 +28,29 @@ void StuSqlOper::GetAllStuInfo()
 	m_pOper->exec();
 }
 
+void StuSqlOper::ChangeStuInfo(int nStuID, QString strName, int nAge)
+{
+	if (nullptr == m_pOper)
+	{
+		return;
+	}
+	m_pOper->prepare("exec updateStuInfo ?, ?, ?");
+	m_pOper->bindValue(0, nStuID);
+	m_pOper->bindValue(1, strName);
+	m_pOper->bindValue(2, nAge);
+	m_pOper->exec();
+}
+
+void StuSqlOper::DelStuInfo(int nStuID)
+{
+	if (nullptr == m_pOper)
+	{
+		return;
+	}
+	m_pOper->prepare("exec delStuInfo ?");
+	m_pOper->bindValue(0, nStuID);
+	m_pOper->exec();
+}
 void StuSqlOper::AddStuInfo(int nStuID, QString strName, int nAge)
 {
 	if (nullptr == m_pOper)
