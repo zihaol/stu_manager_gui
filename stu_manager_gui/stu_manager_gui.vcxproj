@@ -116,6 +116,7 @@
     <ClCompile Include="DialogChangeStuInfo.cpp" />
     <ClCompile Include="DialogDelStuInfoui.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ShouShiCmd.cpp" />
     <ClCompile Include="StuSqlOper.cpp" />
     <ClCompile Include="stu_manager_gui.cpp" />
   </ItemGroup>
@@ -149,6 +150,7 @@
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_WIDGETS_LIB</Define>
     </QtMoc>
+    <ClInclude Include="ShouShiCmd.h" />
     <ClInclude Include="StuSqlOper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

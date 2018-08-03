@@ -8,6 +8,9 @@
 #include "DialogAddStu.h"
 #include "DialogDelStuInfoui.h"
 #include "DialogChangeStuInfo.h"
+#include "ShouShiCmd.h"
+#include <QMouseEvent>
+#include <QPoint>
 
 class stu_manager_gui : public QMainWindow
 {
@@ -23,10 +26,15 @@ public slots:
 	void OnTouchDelStu();
 	void OntouchChangeStu();
 	void OnMyShow(int nNum);
+protected:
+	//手势功能
+	void mouseMoveEvent(QMouseEvent *event);
+	void mouseReleaseEvent(QMouseEvent *event);
 private:
 	Ui::stu_manager_guiClass	ui;
 	DialogAddStu*				m_pDialogAddStu;
 	DialogDelStu*				m_pDialogDelStu;
 	DialogChangeStu*			m_pDialogChangeStu;
+	ShouShiCmd*					m_pShouShiCmd;
 	//StuSqlOper*					m_pStuSqlOper;
 };

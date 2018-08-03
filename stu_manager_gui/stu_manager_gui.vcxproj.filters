@@ -48,6 +48,9 @@
     <ClCompile Include="DialogChangeStuInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ShouShiCmd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="stu_manager_gui.h">
@@ -81,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StuSqlOper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShouShiCmd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

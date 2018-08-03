@@ -57,7 +57,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         m_pTableViewResult = new QTableView(centralWidget);
         m_pTableViewResult->setObjectName(QStringLiteral("m_pTableViewResult"));
-        m_pTableViewResult->setGeometry(QRect(15, 11, 571, 351));
+        m_pTableViewResult->setGeometry(QRect(15, 11, 401, 351));
         stu_manager_guiClass->setCentralWidget(centralWidget);
         m_pMenuBar = new QMenuBar(stu_manager_guiClass);
         m_pMenuBar->setObjectName(QStringLiteral("m_pMenuBar"));

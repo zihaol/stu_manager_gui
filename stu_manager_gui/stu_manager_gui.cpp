@@ -9,6 +9,7 @@ stu_manager_gui::stu_manager_gui(QWidget *parent)
 	m_pDialogAddStu = new DialogAddStu(this, this);
 	m_pDialogDelStu = new DialogDelStu(this, this);
 	m_pDialogChangeStu = new DialogChangeStu(this, this);
+	m_pShouShiCmd = new ShouShiCmd();
 	//ÉèÖÃÏìÓ¦
 	QObject::connect(ui.m_pActionShowStu, SIGNAL(triggered()), this, SLOT(OnTouchShow()));
 	QObject::connect(ui.m_pActionAddStu, SIGNAL(triggered()), this, SLOT(OnTouchAddStu()));
@@ -31,6 +32,31 @@ void stu_manager_gui::OnMyShow(int nNum)
 {
 	int a = nNum;
 	OnTouchShow();
+}
+
+void stu_manager_gui::mouseReleaseEvent(QMouseEvent *event)
+{
+	//if (event->type() == QMouseEvent::MouseMove)
+	{
+		if (m_pShouShiCmd != nullptr)
+		{
+			m_pShouShiCmd->MoveEnd();
+			if (m_pShouShiCmd->GetCmd() == 1)
+			{
+				OnTouchAddStu();
+			}
+		}
+	}
+}
+void stu_manager_gui::mouseMoveEvent(QMouseEvent *event)
+{
+	if (event->type() == QMouseEvent::MouseMove)
+	{
+		if (m_pShouShiCmd != nullptr)
+		{
+			m_pShouShiCmd->Move(&QPoint(event->x(), event->y()));
+		}
+	}
 }
 
 void stu_manager_gui::OnTouchDelStu()
@@ -75,4 +101,10 @@ void stu_manager_gui::OnTouchShow()
 	StuSqlOper::GetInstance()->GetAllStuInfo();
 	pModel->setQuery(*(StuSqlOper::GetInstance()->GetQueryOper()));
 	UpdateResult(pModel);
+
+	////²âÊÔ
+	//m_pShouShiCmd->Move(&QPoint(0, 1));
+	//m_pShouShiCmd->Move(&QPoint(0, -300));
+	//m_pShouShiCmd->Move(&QPoint(300, -300));
+	//m_pShouShiCmd->MoveEnd();
 }
